@@ -1,4 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app-check.js";
 import { getDatabase, ref, set} from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
 
 const firebaseConfig = {
@@ -14,4 +15,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
+const appCheck = initializeAppCheck(app, {
+  provider: new ReCaptchaV3Provider("6LeX9tcnAAAAALS5yiuk241TwTBe94XT0EkYMHVZ")
+})
 export { getDatabase, ref, set }

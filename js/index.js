@@ -39,7 +39,6 @@ window.addEventListener("scroll", () => {
   })
 })
 
-
 // Fixed navigations covering content on scroll
 const navHeight = document.querySelector('#navbar').offsetHeight;
 document.documentElement.style.setProperty("--scroll-padding", navHeight-1 + "px")

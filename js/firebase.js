@@ -16,6 +16,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 const appCheck = initializeAppCheck(app, {
-  provider: new ReCaptchaV3Provider("6LeX9tcnAAAAALS5yiuk241TwTBe94XT0EkYMHVZ")
+  provider: new ReCaptchaV3Provider("6LeX9tcnAAAAALS5yiuk241TwTBe94XT0EkYMHVZ"),
+  isTokenAutoRefreshEnabled: true,
 })
 export { getDatabase, ref, set }

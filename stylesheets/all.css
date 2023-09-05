@@ -10215,7 +10215,7 @@ textarea.form-control-lg {
   }
 }
 .header {
-  height: 80vh;
+  height: 100vh;
   background-size: cover;
   background-position: center center;
 }
@@ -10267,4 +10267,19 @@ body {
 html {
   scroll-padding-top: var(--scroll-padding, 56px);
   scroll-behavior: smooth;
+}
+
+.card--float {
+  transition: all 0.3s;
+}
+.card--float:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.32);
+}
+
+@media (max-width: 768px) {
+  .card--float:hover {
+    transform: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
 }/*# sourceMappingURL=all.css.map */

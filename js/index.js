@@ -43,6 +43,7 @@ window.addEventListener("scroll", () => {
 const navHeight = document.querySelector('#navbar').offsetHeight;
 document.documentElement.style.setProperty("--scroll-padding", navHeight-1 + "px")
 
+
 // Save form value
 const feedback =  document.querySelectorAll('input, textarea');
 feedback.forEach(element => {
@@ -56,4 +57,10 @@ document.addEventListener("DOMContentLoaded", function() {
   feedback.forEach(element => {
     element.value = sessionStorage.getItem(element.name);
   })
+  // $('.card--float').hover(function () {
+  //   $('.card--float').stop().fadeTo('fast', 0.3);
+  //   $(this).stop().fadeTo('fast', 1);
+  // }, function () {
+  //     $('.card--float').stop().fadeTo('fast', 1);
+  // });
 });

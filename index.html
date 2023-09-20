@@ -1,415 +1,388 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="你正在尋找一種可以深度放鬆身心、提升生活品質的方式？那就讓芳療帶你探索身心平衡的奧秘！芳香秘境是一個獨特的線上教學網站，致力於為你打開精油的神秘大門，讓你親身體驗植物的奇妙力量。我們為您呈現一系列精心策劃的課程，以滿足您的求知慾望和美好願望。"/>
-  <link rel="icon" href="./image/favicon.ico">
-  <link rel="stylesheet" href="./stylesheets/all.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/f11bd19920.js" crossorigin="anonymous"></script>
-  <script src="./js/index.js" type="module"></script>
-  <script src="./js/firebase.js" type="module"></script>
-  <script src="./js/sanitize.js" type="module"></script>
-  
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.5/purify.min.js"></script>
-  <title>芳香秘境</title>
-</head>
-<!-- <style>
-  .carousel-item {
-    height: 100%;
-  }
-</style> -->
-<body>
-  
-  <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
-    <!-- container-fluid -->
-    <div class="container">
-      <div>
-        <img src="./image/logo.svg" alt="logo" class="me-1" style="height: 30px;">
-        <a class="navbar-brand text-tertiary align-bottom" href="#">芳香秘境</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="你正在尋找一種可以深度放鬆身心、提升生活品質的方式？那就讓芳療帶你探索身心平衡的奧秘！芳香秘境是一個獨特的線上教學網站，致力於為你打開精油的神秘大門，讓你親身體驗植物的奇妙力量。我們為您呈現一系列精心策劃的課程，以滿足您的求知慾望和美好願望。" />
+    <link rel="icon" href="./image/favicon.ico" />
+    <link rel="stylesheet" href="./stylesheets/all.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/f11bd19920.js" crossorigin="anonymous"></script>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/firebase.js" type="module"></script>
+    <script src="./js/sanitize.js" type="module"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.5/purify.min.js"></script>
+    <title>芳香秘境</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+      <!-- container-fluid -->
+      <div class="container">
+        <div>
+          <img src="./image/logo.svg" alt="logo" class="me-1" style="height: 30px" />
+          <a class="navbar-brand text-tertiary align-bottom" href="#">芳香秘境</a>
+        </div>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-2">
+              <a class="nav-link active" aria-current="page" href="#home">首頁</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#info">課程資訊</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#share">案例分享</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#qa">常見問題</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#price">方案費用</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#contact">聯絡我們</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item mx-2">
-            <a class="nav-link active" aria-current="page" href="#home">首頁</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#info">課程資訊</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#share">案例分享</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#qa">常見問題</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#price">方案費用</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#contact">聯絡我們</a>
-          </li>
-        </ul>
+    </nav>
+
+    <header>
+      <section id="home" class="header px-4 py-5 d-flex justify-content-center align-items-center" style="background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3)), url(./image/hero02.jpg)">
+        <div class="text-center text-white">
+          <p class="fs-5">你是不是也有夢想</p>
+          <h1 class="fw-bold">想成為一位芳療師</h1>
+          <p>
+            你是否渴望在繁忙的現代生活中找到一份舒緩和平靜？<br />
+            我們的精油課程將帶你進入精油的奇妙世界，<br />
+            讓你從中獲得健康、平衡和幸福。
+          </p>
+        </div>
+      </section>
+    </header>
+
+    <!-- Back to top button -->
+    <a href="#" class="btn btn-tertiary rounded-circle" id="btn-back-to-top">
+      <i class="bi bi-arrow-up text-white"></i>
+    </a>
+
+    <!-- Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="exampleModalLabel">親愛的客戶<i class="bi bi-heart-fill text-danger ms-2"></i></h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-start">我們非常感謝您撥冗給予寶貴的回饋。您的意見對於我們不僅僅是一份寶貴的資源，更是我們不斷進步的動力。如果您還有任何想法、建議或疑問，請隨時與我們聯繫。我們非常期待能夠持續為您提供優質的服務。</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-tertiarylight" data-bs-dismiss="modal">
+              <p class="mb-0 text-white">關閉</p>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </nav>
- 
-  <header>
-    <section id="home" class="header px-4 py-5 d-flex justify-content-center align-items-center" 
-    style="background-image:linear-gradient( to right bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3) ), url(./image/hero02.jpg);">
-      <div class="text-center text-white">
-        <p class="fs-5">你是不是也有夢想</p>
-        <h1 class="fw-bold">想成為一位芳療師</h1>
-        <p>你是否渴望在繁忙的現代生活中找到一份舒緩和平靜？<br>
-          我們的精油課程將帶你進入精油的奇妙世界，<br>
-          讓你從中獲得健康、平衡和幸福。
+
+    <section id="info">
+      <div class="container py-5">
+        <div class="row flex-row-reverse">
+          <div class="col-lg-6 d-flex align-items-center justify-content-center">
+            <div>
+              <h2 class="fw-bold">讓我們幫你節省寶貴的時間</h2>
+              <p class="text-primary lh-lg">
+                我們的專家團隊擁有多年的精油研究和實踐經驗，<br class="d-lg-none" />
+                將帶領你探索精油的各個層面。<br class="d-lg-none" />
+                課程提供高質量的學習資料、影片示範和互動環節，<br class="d-lg-none" />
+                確保你能夠輕鬆學習並掌握知識。<br class="d-lg-none" />
+                你可以隨時隨地在線學習，無需擔心時間和地點的限制，<br class="d-lg-none" />
+                讓學習融入你的生活。
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-center justify-content-center">
+            <img src="./image/info.jpg" alt="info-picture" class="w-100" />
+          </div>
+        </div>
+      </div>
+
+      <div class="py-5" id="trouble" style="background-image: url(./image/bg_paper.png)">
+        <div class="container">
+          <h2 class="text-center mb-4">你有這些煩惱嗎？</h2>
+          <ul class="row row-cols-1 row-cols-lg-4 g-3 g-lg-4 list-unstyled">
+            <li class="col">
+              <div class="card card--float border-0 shadow h-100">
+                <div class="card-body text-center py-4 h-100">
+                  <i class="bi bi-journal-x fs-s-48 text-primary"></i>
+                  <h3 class="h4">缺乏精油知識</h3>
+                  <p class="text-quaternary card-text lh-lg">網路上有很多精油資訊，<br />不知道從何開始學習</p>
+                </div>
+              </div>
+            </li>
+            <li class="col">
+              <div class="card card--float border-0 shadow h-100">
+                <div class="card-body text-center py-4">
+                  <i class="bi bi-eyedropper fs-s-48 text-primary"></i>
+                  <h3 class="h4">不會調配精油</h3>
+                  <p class="text-quaternary card-text lh-lg">初學者不熟悉精油的安全使用<br class="d-lg-none" />方法，可能會擔心使用不當<br class="d-lg-none" />導致不良反應。</p>
+                </div>
+              </div>
+            </li>
+            <li class="col">
+              <div class="card card--float border-0 shadow h-100">
+                <div class="card-body text-center py-4">
+                  <i class="bi bi-shop fs-s-48 text-primary"></i>
+                  <h3 class="h4">不會挑選精油</h3>
+                  <p class="text-quaternary card-text lh-lg">精油種類眾多，初學者不知道<br class="d-lg-none" />該選擇哪些精油，以及如何<br class="d-lg-none" />區分它們的用途和特性</p>
+                </div>
+              </div>
+            </li>
+            <li class="col">
+              <div class="card card--float border-0 shadow h-100">
+                <div class="card-body text-center py-4">
+                  <i class="bi bi-emoji-dizzy fs-s-48 text-primary"></i>
+                  <h3 class="h4">不會分辨真假</h3>
+                  <p class="text-quaternary card-text lh-lg">市場上有許多假冒產品，無法<br class="d-lg-none" />辨別出高品質的精油</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
-  </header>
 
-  <!-- Back to top button -->
-  <a href="#" class="btn btn-tertiary rounded-circle" id="btn-back-to-top">
-    <i class="bi bi-arrow-up text-white"></i>
-  </a>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">親愛的客戶<i class="bi bi-heart-fill text-danger ms-2"></i></h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-start">
-          我們非常感謝您撥冗給予寶貴的回饋。您的意見對於我們不僅僅是一份寶貴的資源，更是我們不斷進步的動力。如果您還有任何想法、建議或疑問，請隨時與我們聯繫。我們非常期待能夠持續為您提供優質的服務。
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-tertiarylight" data-bs-dismiss="modal"><p class="mb-0 text-white">關閉</p></button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <section id="info">
-    <div class="container py-5">
-      <div class="row flex-row-reverse">
-        <div class="col-lg-6 d-flex align-items-center justify-content-center">
-          <div>
-            <h2 class="fw-bold">讓我們幫你節省寶貴的時間</h2>
-            <p class="text-primary lh-lg">
-              我們的專家團隊擁有多年的精油研究和實踐經驗，<br class="d-lg-none">
-              將帶領你探索精油的各個層面。<br class="d-lg-none">
-              課程提供高質量的學習資料、影片示範和互動環節，<br class="d-lg-none">
-              確保你能夠輕鬆學習並掌握知識。<br class="d-lg-none">
-              你可以隨時隨地在線學習，無需擔心時間和地點的限制，<br class="d-lg-none">
-              讓學習融入你的生活。
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <img src="./image/info.jpg" alt="info-picture" class="w-100">
-        </div>
-      </div>
-    </div>
-
-    <div class="py-5" id="trouble" style="background-image: url(./image/bg_paper.png);">
+    <section class="py-5" id="share">
       <div class="container">
-        <h2 class="text-center mb-4">你有這些煩惱嗎？</h2>
-        <div class="row row-cols-1 row-cols-lg-4 g-3 g-lg-4">
-          <div class="col">
-            <div class="card card--float border-0 shadow h-100">
-              <div class="card-body text-center py-4 h-100">
-                <i class="bi bi-journal-x fs-s-48 text-primary"></i>
-                <h3 class="h4">缺乏精油知識</h3>
-                <p class="text-quaternary card-text lh-lg">
-                  網路上有很多精油資訊，<br>不知道從何開始學習
-                </p>
+        <h2 class="text-center mb-4">案例分享</h2>
+        <div id="testimonial" class="carousel slide">
+          <!-- data-bs-ride="carousel" -->
+          <div class="carousel-indicators mb-0">
+            <button type="button" data-bs-target="#testimonial" data-bs-slide-to="0" class="active bg-primary" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#testimonial" data-bs-slide-to="1" class="bg-primary" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#testimonial" data-bs-slide-to="2" class="bg-primary" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#testimonial" data-bs-slide-to="3" class="bg-primary" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#testimonial" data-bs-slide-to="4" class="bg-primary" aria-label="Slide 5"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-lg-10">
+                  <div class="card border-0">
+                    <div class="card-body m-3">
+                      <div class="row">
+                        <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                          <img src="./image/person01.jpg" class="img-fluid rounded-circle" width="200" height="200" alt="person01-img" />
+                        </div>
+                        <div class="col-lg-8 d-flex flex-column align-items-center justify-content-center align-items-lg-start">
+                          <ul class="list-unstyled text-warning mb-1 d-flex flex-row">
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                          <p class="text-muted mb-0 text-lg-start">霏婷原本是一位自學的芳療愛好者，通過閱讀書籍和在線資源，她自學了基本的芳療知識。然而，她想將這個愛好發展為職業。通過參加我們的線上芳療課程，她學到了更深入的知識，了解了精油的科學背景、安全使用方法和專業技能。現在，霏婷成為了一名受人尊敬的芳療師，並且在社區中開設了自己的芳療諮詢服務。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-10">
+                  <div class="card border-0">
+                    <div class="card-body m-3">
+                      <div class="row">
+                        <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                          <img src="./image/person02.jpg" class="img-fluid rounded-circle" width="200" height="200" alt="person01-img" />
+                        </div>
+                        <div class="col-lg-8 d-flex flex-column align-items-center justify-content-center align-items-lg-start">
+                          <ul class="list-unstyled text-warning mb-1 d-flex flex-row">
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                          <p class="text-muted mb-0 text-lg-start">婷娜曾經長期處於壓力和焦慮中，尋求著自然的方法來改善她的健康狀況。她通過朋友的介紹，找到了我們的線上芳療課程。在課程中，她學到了如何使用精油來減輕壓力和焦慮，並開始在日常生活中實踐這些技巧。隨著時間的推移，她不僅改善了自己的健康狀況，還決定幫助他人。現在，她是一名專業的芳療師，致力於幫助那些面臨健康問題的人們。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-10">
+                  <div class="card border-0">
+                    <div class="card-body m-3">
+                      <div class="row">
+                        <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                          <img src="./image/person03.jpg" class="img-fluid rounded-circle" width="200" height="200" alt="person01-img" />
+                        </div>
+                        <div class="col-lg-8 d-flex flex-column align-items-center justify-content-center align-items-lg-start">
+                          <ul class="list-unstyled text-warning mb-1 d-flex flex-row">
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                          <p class="text-muted mb-0 text-lg-start">雅露是一位瑜伽老師，她一直尋求著將瑜伽和自然療法相結合的方法。她參加了我們的線上芳療課程，以增強自己的專業知識。這使她能夠在瑜伽課程中融入芳療元素，通過精油的香氣和療效來加強學生的瑜伽體驗。她還開始提供芳療治療服務，幫助客戶實現身心靈的平衡。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-10">
+                  <div class="card border-0">
+                    <div class="card-body m-3">
+                      <div class="row">
+                        <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                          <img src="./image/person04.jpg" class="img-fluid rounded-circle" width="200" height="200" alt="person01-img" />
+                        </div>
+                        <div class="col-lg-8 d-flex flex-column align-items-center justify-content-center align-items-lg-start">
+                          <ul class="list-unstyled text-warning mb-1 d-flex flex-row">
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                          <p class="text-muted mb-0 text-lg-start">悦婷是一位忙碌的家庭主婦，她一直渴望擁有自己的事業。她參加了我們的線上芳療課程，以尋找一個能夠在家工作的機會。通過課程，她學到了如何製作精油產品，並開始在社交媒體上展示她的作品。很快，她的自製芳療產品受到了廣泛的歡迎，她成功地開始了自己的在線芳療事業。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-10">
+                  <div class="card border-0">
+                    <div class="card-body m-3">
+                      <div class="row">
+                        <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                          <img src="./image/person05.jpg" class="img-fluid rounded-circle" width="200" height="200" alt="person01-img" />
+                        </div>
+                        <div class="col-lg-8 d-flex flex-column align-items-center justify-content-center align-items-lg-start">
+                          <ul class="list-unstyled text-warning mb-1 d-flex flex-row">
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                          <p class="text-muted mb-0 text-lg-start">拉斯是一名按摩師，他想要擴展自己的技能並提供更多多樣化的治療選項。他參加了我們的線上芳療課程，並學到了如何在按摩療法中使用精油來增強療效。這使他的按摩服務更加多樣化並受到了客戶的喜愛。他現在被認為是一名芳療專家，綜合運用了按摩和芳療的知識，為客戶提供全面的綜合治療。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card card--float border-0 shadow h-100">
-              <div class="card-body text-center py-4">
-                <i class="bi bi-eyedropper fs-s-48 text-primary"></i>
-                <h3 class="h4">不會調配精油</h3>
-                <p class="text-quaternary card-text lh-lg">
-                  初學者不熟悉精油的安全使用<br class="d-lg-none">方法，可能會擔心使用不當<br class="d-lg-none">導致不良反應。
-                </p>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonial" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-primary rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonial" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-primary rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="qa" style="background-image: url(./image/bg_paper.png)">
+      <div class="container">
+        <h2 class="text-center mb-4">常見問題</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="accordion accordion-flush" id="accordionPanels">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#qa-1" aria-expanded="true" aria-controls="qa-1">
+                    <p class="mb-0">Q: 什麼是芳療師？</p>
+                  </button>
+                </h2>
+                <div id="qa-1" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <p class="mb-0">芳療師是一種專業人士，通過學習植物精油的特性和應用，幫助人們改善身體和心理健康的專業人士。他們使用精油進行按摩、熏香和其他治療方法，以促進身心平衡。</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card card--float border-0 shadow h-100">
-              <div class="card-body text-center py-4">
-                <i class="bi bi-shop fs-s-48 text-primary"></i>
-                <h3 class="h4">不會挑選精油</h3>
-                <p class="text-quaternary card-text lh-lg">
-                  精油種類眾多，初學者不知道<br class="d-lg-none">該選擇哪些精油，以及如何<br class="d-lg-none">區分它們的用途和特性
-                </p>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#qa-2" aria-expanded="false" aria-controls="qa-2">
+                    <p class="mb-0">Q: 需要哪些知識背景才能成為芳療師？</p>
+                  </button>
+                </h2>
+                <div id="qa-2" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <p class="mb-0">成為芳療師通常需要對植物學、精油學、人體解剖學和生理學等相關領域有基本了解。這些知識將幫助你更好地了解精油的作用和影響。</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card card--float border-0 shadow h-100">
-              <div class="card-body text-center py-4">
-                <i class="bi bi-emoji-dizzy fs-s-48 text-primary"></i>
-                <h3 class="h4">不會分辨真假</h3>
-                <p class="text-quaternary card-text lh-lg">
-                  市場上有許多假冒產品，無法<br class="d-lg-none">辨別出高品質的精油
-                </p>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#qa-3" aria-expanded="false" aria-controls="qa-3">
+                    <p class="mb-0">Q: 這堂課需要有一定的知識背景才能上嗎？</p>
+                  </button>
+                </h2>
+                <div id="qa-3" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <p class="mb-0">我們提供的線上芳療師培訓課程，涵蓋基本概念、精油特性、使用方法和安全注意事項等，就算不具備有芳療背景也能輕鬆學習。</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#qa-4" aria-expanded="false" aria-controls="qa-4">
+                    <p class="mb-0">Q: 如何取得芳療師的資格？</p>
+                  </button>
+                </h2>
+                <div id="qa-4" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <p class="mb-0">成為合格的芳療師需要完成相應的培訓課程，並通過相關的認證考試。在我們的網站上，你將學習到必要的知識和技能，並在課程結束後有機會參加認證考試。</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
- 
-  <section class="py-5" id="share">
-    <div class="container">
-      <h2 class="text-center mb-4">案例分享</h2>
-      <div id="testimonial" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators mb-0">
-          <button type="button" data-bs-target="#testimonial" data-bs-slide-to="0" class="active bg-primary" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#testimonial" data-bs-slide-to="1" class="bg-primary" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#testimonial" data-bs-slide-to="2" class="bg-primary" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#testimonial" data-bs-slide-to="3" class="bg-primary" aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#testimonial" data-bs-slide-to="4" class="bg-primary" aria-label="Slide 5"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row justify-content-center">
-              <div class="col-lg-10">
-                <div class="card border-0">
-                  <div class="card-body m-3">
-                    <div class="row">
-                      <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0" >
-                        <img src="./image/person01.jpg" class="img-fluid rounded-circle" width="200" height="200" alt="person01-img">
-                      </div>
-                      <div class="col-lg-8 d-flex flex-column align-items-center justify-content-center align-items-lg-start">
-                        <ul class="list-unstyled text-warning mb-1 d-flex flex-row">
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                        </ul>
-                        <p class="text-muted mb-0 text-lg-start">
-                          霏婷原本是一位自學的芳療愛好者，通過閱讀書籍和在線資源，她自學了基本的芳療知識。然而，她想將這個愛好發展為職業。通過參加我們的線上芳療課程，她學到了更深入的知識，了解了精油的科學背景、安全使用方法和專業技能。現在，霏婷成為了一名受人尊敬的芳療師，並且在社區中開設了自己的芳療諮詢服務。
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-              <div class="col-lg-10">
-                <div class="card border-0">
-                  <div class="card-body m-3">
-                    <div class="row">
-                      <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0" >
-                        <img src="./image/person02.jpg" class="img-fluid rounded-circle" width="200" height="200" alt="person01-img">
-                      </div>
-                      <div class="col-lg-8 d-flex flex-column align-items-center justify-content-center align-items-lg-start">
-                        <ul class="list-unstyled text-warning mb-1 d-flex flex-row">
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                        </ul>
-                        <p class="text-muted mb-0 text-lg-start">
-                          婷娜曾經長期處於壓力和焦慮中，尋求著自然的方法來改善她的健康狀況。她通過朋友的介紹，找到了我們的線上芳療課程。在課程中，她學到了如何使用精油來減輕壓力和焦慮，並開始在日常生活中實踐這些技巧。隨著時間的推移，她不僅改善了自己的健康狀況，還決定幫助他人。現在，她是一名專業的芳療師，致力於幫助那些面臨健康問題的人們。
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-              <div class="col-lg-10">
-                <div class="card border-0">
-                  <div class="card-body m-3">
-                    <div class="row">
-                      <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0" >
-                        <img src="./image/person03.jpg" class="img-fluid rounded-circle" width="200" height="200" alt="person01-img">
-                      </div>
-                      <div class="col-lg-8 d-flex flex-column align-items-center justify-content-center align-items-lg-start">
-                        <ul class="list-unstyled text-warning mb-1 d-flex flex-row">
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                        </ul>
-                        <p class="text-muted mb-0 text-lg-start">
-                          雅露是一位瑜伽老師，她一直尋求著將瑜伽和自然療法相結合的方法。她參加了我們的線上芳療課程，以增強自己的專業知識。這使她能夠在瑜伽課程中融入芳療元素，通過精油的香氣和療效來加強學生的瑜伽體驗。她還開始提供芳療治療服務，幫助客戶實現身心靈的平衡。
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-              <div class="col-lg-10">
-                <div class="card border-0">
-                  <div class="card-body m-3">
-                    <div class="row">
-                      <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0" >
-                        <img src="./image/person04.jpg" class="img-fluid rounded-circle" width="200" height="200" alt="person01-img">
-                      </div>
-                      <div class="col-lg-8 d-flex flex-column align-items-center justify-content-center align-items-lg-start">
-                        <ul class="list-unstyled text-warning mb-1 d-flex flex-row">
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                        </ul>
-                        <p class="text-muted mb-0 text-lg-start">
-                          悦婷是一位忙碌的家庭主婦，她一直渴望擁有自己的事業。她參加了我們的線上芳療課程，以尋找一個能夠在家工作的機會。通過課程，她學到了如何製作精油產品，並開始在社交媒體上展示她的作品。很快，她的自製芳療產品受到了廣泛的歡迎，她成功地開始了自己的在線芳療事業。
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-              <div class="col-lg-10">
-                <div class="card border-0">
-                  <div class="card-body m-3">
-                    <div class="row">
-                      <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0" >
-                        <img src="./image/person05.jpg" class="img-fluid rounded-circle" width="200" height="200" alt="person01-img">
-                      </div>
-                      <div class="col-lg-8 d-flex flex-column align-items-center justify-content-center align-items-lg-start">
-                        <ul class="list-unstyled text-warning mb-1 d-flex flex-row">
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                          <li><i class="bi bi-star-fill"></i></li>
-                        </ul>
-                        <p class="text-muted mb-0 text-lg-start">
-                          拉斯是一名按摩師，他想要擴展自己的技能並提供更多多樣化的治療選項。他參加了我們的線上芳療課程，並學到了如何在按摩療法中使用精油來增強療效。這使他的按摩服務更加多樣化並受到了客戶的喜愛。他現在被認為是一名芳療專家，綜合運用了按摩和芳療的知識，為客戶提供全面的綜合治療。
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonial" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bg-primary rounded-circle" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonial" data-bs-slide="next">
-          <span class="carousel-control-next-icon bg-primary rounded-circle" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="py-5" id="qa" style="background-image: url(./image/bg_paper.png);">
-    <div class="container">
-      <h2 class="text-center mb-4">常見問題</h2>
-      <div class="row justify-content-center">
-      <div class="col-md-10">
-        <div class="accordion accordion-flush" id="accordionPanels">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#qa-1" aria-expanded="true" aria-controls="qa-1">
-                <p class="mb-0">Q: 什麼是芳療師？</p>
-              </button>
-            </h2>
-            <div id="qa-1" class="accordion-collapse collapse show">
-              <div class="accordion-body">
-                <p class="mb-0">芳療師是一種專業人士，通過學習植物精油的特性和應用，幫助人們改善身體和心理健康的專業人士。他們使用精油進行按摩、熏香和其他治療方法，以促進身心平衡。</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#qa-2" aria-expanded="false" aria-controls="qa-2">
-                <p class="mb-0">Q: 需要哪些知識背景才能成為芳療師？</p>
-              </button>
-            </h2>
-            <div id="qa-2" class="accordion-collapse collapse show">
-              <div class="accordion-body">
-                <p class="mb-0">成為芳療師通常需要對植物學、精油學、人體解剖學和生理學等相關領域有基本了解。這些知識將幫助你更好地了解精油的作用和影響。</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#qa-3" aria-expanded="false" aria-controls="qa-3">
-                <p class="mb-0">Q: 這堂課需要有一定的知識背景才能上嗎？</p>
-              </button>
-            </h2>
-            <div id="qa-3" class="accordion-collapse collapse show">
-              <div class="accordion-body">
-                <p class="mb-0">我們提供的線上芳療師培訓課程，涵蓋基本概念、精油特性、使用方法和安全注意事項等，就算不具備有芳療背景也能輕鬆學習。</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#qa-4" aria-expanded="false" aria-controls="qa-4">
-                <p class="mb-0">Q: 如何取得芳療師的資格？</p>
-              </button>
-            </h2>
-            <div id="qa-4" class="accordion-collapse collapse show">
-              <div class="accordion-body">
-                <p class="mb-0">成為合格的芳療師需要完成相應的培訓課程，並通過相關的認證考試。在我們的網站上，你將學習到必要的知識和技能，並在課程結束後有機會參加認證考試。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-    
-   
-  </section>
-
-  <section class="container py-5" id="price">
-    <h2 class="text-center mb-4">方案費用</h2>
-      <div class="row row-cols-1 row-cols-lg-3 g-3 g-lg-4">
-        <div class="col">
+    <section class="container py-5" id="price">
+      <h2 class="text-center mb-4">方案費用</h2>
+      <ul class="row row-cols-1 row-cols-lg-3 g-3 g-lg-4 list-unstyled">
+        <li class="col">
           <div class="card card--float border-0 shadow h-100">
-            <div class="card-header border-0 text-center text-primary">
-              初階課程
-            </div>
+            <div class="card-header border-0 text-center text-primary">初階課程</div>
             <div class="card-body text-center">
-              <img src="./image/plan01.jpg" alt="plan01-img" class="img-fluid object-fit-cover">
-              <div class="text-primary mt-3">
-                NT <strong class="fs-1">1999</strong> /堂
-              </div>
+              <img src="./image/plan01.jpg" alt="plan01-img" class="img-fluid object-fit-cover" />
+              <div class="text-primary mt-3">NT <strong class="fs-1">1999</strong> /堂</div>
             </div>
             <ul class="list-group list-group-flush border-top border-bottom">
               <li class="list-group-item text-quaternary"><i class="bi bi-check-circle-fill text-primary me-2"></i>精油基礎知識</li>
@@ -421,40 +394,31 @@
               <button type="button" class="btn btn-primary text-white w-100 align-self-end">選擇方案</button>
             </div>
           </div>
-        </div>
-        <div class="col">
+        </li>
+        <li class="col">
           <div class="card card--float border-0 shadow h-100">
-            <div class="card-header border-0 bg-primary text-center text-white">
-              中階課程
-            </div>
+            <div class="card-header border-0 bg-primary text-center text-white">中階課程</div>
             <div class="card-body text-center flex-grow-0">
-              <img src="./image/plan02.jpg" alt="plan02-img" class="img-fluid object-fit-cover">
-              <div class="text-primary mt-3">
-                NT <strong class="fs-1">3999</strong> /堂
-              </div>
+              <img src="./image/plan02.jpg" alt="plan02-img" class="img-fluid object-fit-cover" />
+              <div class="text-primary mt-3">NT <strong class="fs-1">3999</strong> /堂</div>
             </div>
             <ul class="list-group list-group-flush border-top border-bottom">
               <li class="list-group-item text-quaternary"><i class="bi bi-check-circle-fill text-primary me-2"></i>認識人體七大脈輪</li>
               <li class="list-group-item text-quaternary"><i class="bi bi-check-circle-fill text-primary me-2"></i>精油成分深入探索</li>
               <li class="list-group-item text-quaternary"><i class="bi bi-check-circle-fill text-primary me-2"></i>特定情境下的應用</li>
               <li class="list-group-item text-quaternary"><i class="bi bi-check-circle-fill text-primary me-2"></i>自製按摩油和產品</li>
-             
             </ul>
             <div class="card-body d-flex">
               <button type="button" class="btn btn-primary text-white w-100 align-self-end">選擇方案</button>
             </div>
           </div>
-        </div>
-        <div class="col">
+        </li>
+        <li class="col">
           <div class="card card--float border-0 shadow h-100">
-            <div class="card-header border-0 text-center text-primary">
-              高階課程
-            </div>
+            <div class="card-header border-0 text-center text-primary">高階課程</div>
             <div class="card-body text-center">
-              <img src="./image/plan03.jpg" alt="plan03-img" class="img-fluid object-fit-cover">
-              <div class="text-primary mt-3">
-                NT <strong class="fs-1">6999</strong> /堂
-              </div>
+              <img src="./image/plan03.jpg" alt="plan03-img" class="img-fluid object-fit-cover" />
+              <div class="text-primary mt-3">NT <strong class="fs-1">6999</strong> /堂</div>
             </div>
             <ul class="list-group list-group-flush border-top border-bottom">
               <li class="list-group-item text-quaternary"><i class="bi bi-check-circle-fill text-primary me-2"></i>芳療心理學</li>
@@ -466,73 +430,62 @@
               <button type="button" class="btn btn-primary text-white w-100 align-self-end">選擇方案</button>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  </section>
+        </li>
+      </ul>
+    </section>
 
-  <footer>
-    <section class="bg-primary p-5 text-white" id="contact">
-      <div class="container">
-        <h2 class="text-center mb-4">聯絡我們</h2>
-        <div class="row justify-content-center flex-row-reverse gy-5">
-          <form id="feedback" class="col-md-6 col-lg-5 needs-validation" novalidate autocomplete="off">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label for="validationLastname" class="form-label">姓氏 *</label>
-                <input name="lastname" type="text" class="form-control" id="validationLastname" value="" required>
-                <div class="invalid-feedback">
-                  請輸入姓氏
+    <footer>
+      <section class="bg-primary p-5 text-white" id="contact">
+        <div class="container">
+          <h2 class="text-center mb-4">聯絡我們</h2>
+          <div class="row justify-content-center flex-row-reverse gy-5">
+            <form id="feedback" class="col-md-6 col-lg-5 needs-validation" novalidate autocomplete="off">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="validationLastname" class="form-label">姓氏 *</label>
+                  <input name="lastname" type="text" class="form-control" id="validationLastname" value="" required />
+                  <div class="invalid-feedback">請輸入姓氏</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationFirstname" class="form-label">名 *</label>
+                  <input name="firstname" type="text" class="form-control" id="validationFirstname" value="" required />
+                  <div class="invalid-feedback">請輸入名字</div>
+                </div>
+                <div class="mb-3 col-12">
+                  <label for="validationEmail" class="form-label">Email *</label>
+                  <input name="email" type="email" class="form-control" id="validationEmail" placeholder="name@example.com" required />
+                  <div class="invalid-feedback">請輸入 Email</div>
+                </div>
+                <div class="mb-3 col-12">
+                  <label for="validationMessage" class="form-label">留些訊息給我吧 *</label>
+                  <textarea name="message" type="text" class="form-control" id="validationMessage" rows="3" required></textarea>
+                  <div class="invalid-feedback">請輸入訊息</div>
+                </div>
+                <div class="col-12 text-end">
+                  <button class="btn btn-outline-light" type="submit" id="btn-form">送出表單</button>
                 </div>
               </div>
-              <div class="col-md-6">
-                <label for="validationFirstname" class="form-label">名 *</label>
-                <input name="firstname" type="text" class="form-control" id="validationFirstname" value="" required>
-                <div class="invalid-feedback">
-                  請輸入名字
-                </div>
-              </div>
-              <div class="mb-3 col-12">
-                <label for="validationEmail" class="form-label">Email *</label>
-                <input name="email" type="email" class="form-control" id="validationEmail" placeholder="name@example.com" required>
-                <div class="invalid-feedback">
-                  請輸入 Email
-                </div>
-              </div>
-              <div class="mb-3 col-12">
-                <label for="validationMessage" class="form-label">留些訊息給我吧 *</label>
-                <textarea name="message" type="text" class="form-control" id="validationMessage" rows="3" required></textarea>
-                <div class="invalid-feedback">
-                  請輸入訊息
-                </div>
-              </div>
-              <div class="col-12 text-end">
-                <button class="btn btn-outline-light" type="submit" id="btn-form">送出表單</button>
-              </div>
+            </form>
+            <div class="col-md-6 col-lg-5">
+              <p>現在就報名加入我們，探索芳療的獨特魅力！</p>
+              <h3 class="h4">聯絡方式</h3>
+              <ul class="list-unstyled">
+                <li><i class="bi bi-envelope me-2"></i>Aromamystery@email.com</li>
+                <li><i class="bi bi-telephone me-2"></i>0987-654-321</li>
+              </ul>
+              <h3 class="h4 mt-5">社群關注</h3>
+              <ul class="list-unstyled">
+                <li><i class="bi bi-instagram me-2"></i>@Aromamystery</li>
+                <li><i class="bi bi-facebook me-2"></i>fb.me/Aromamystery</li>
+                <li><i class="bi bi-twitter me-2"></i>Aromamystery</li>
+              </ul>
+              <p id="copyright">2023 &copy; 芳香秘境｜Designed By 劉韋辰</p>
             </div>
-          </form>
-          <div class="col-md-6 col-lg-5">
-            <p>現在就報名加入我們，探索芳療的獨特魅力！</p>
-            <h3 class="h4">聯絡方式</h3>
-            <ul class="list-unstyled">
-              <li><i class="bi bi-envelope me-2"></i>Aromamystery@email.com</li>
-              <li><i class="bi bi-telephone me-2"></i>0987-654-321</li>
-            </ul>
-            <h3 class="h4 mt-5">社群關注</h3>
-            <ul class="list-unstyled">
-              <li><i class="bi bi-instagram me-2"></i>@Aromamystery</li>
-              <li><i class="bi bi-facebook me-2"></i>fb.me/Aromamystery</li>
-              <li><i class="bi bi-twitter me-2"></i>Aromamystery</li>
-            </ul>
-            <p id="copyright">2023 &copy; 芳香秘境｜Designed By 劉韋辰</p>
           </div>
         </div>
-      </div>
-    </section>    
-  </footer>
+      </section>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> 
-
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
 </html>

@@ -41,10 +41,7 @@ window.addEventListener("scroll", () => {
 
 // Fixed navigations covering content on scroll
 const navHeight = document.querySelector("#navbar").offsetHeight;
-document.documentElement.style.setProperty(
-  "--scroll-padding",
-  navHeight - 1 + "px"
-);
+document.documentElement.style.setProperty("--scroll-padding", navHeight - 1 + "px");
 
 // Save form value
 const feedback = document.querySelectorAll("input, textarea");

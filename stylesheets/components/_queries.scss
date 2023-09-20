@@ -1,6 +1,18 @@
 @media (max-width: 768px) {
   .card--float:hover {
-    transform:none;
+    transform: none;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+}
+/**************************/
+/* BELOW 576px (Phones) */
+/**************************/
+
+@media (max-width: 576px) {
+  .header {
+    height: 60vh;
+  }
+  .w-md-75 {
+    width: 75% !important;
   }
 }

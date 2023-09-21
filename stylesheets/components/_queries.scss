@@ -1,7 +1,15 @@
+@media (max-width: 992px) {
+}
 @media (max-width: 768px) {
   .card--float:hover {
     transform: none;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  .w-md-75 {
+    width: 75% !important;
+  }
+  .carousel-item p {
+    height: 120px;
   }
 }
 /**************************/
@@ -12,7 +20,8 @@
   .header {
     height: 60vh;
   }
-  .w-md-75 {
-    width: 75% !important;
+  .carousel-item p {
+    height: 144px;
+    overflow-y: auto;
   }
 }

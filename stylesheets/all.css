@@ -10493,6 +10493,12 @@ html {
     transform: none;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   }
+  .w-md-75 {
+    width: 75% !important;
+  }
+  .carousel-item p {
+    height: 120px;
+  }
 }
 /**************************/
 /* BELOW 576px (Phones) */
@@ -10501,7 +10507,8 @@ html {
   .header {
     height: 60vh;
   }
-  .w-md-75 {
-    width: 75% !important;
+  .carousel-item p {
+    height: 144px;
+    overflow-y: auto;
   }
 }/*# sourceMappingURL=all.css.map */

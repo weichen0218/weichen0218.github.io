@@ -2,6 +2,10 @@
   .w-lg-75 {
     width: 75% !important;
   }
+  .card--float:hover {
+    transform: initial;
+    box-shadow: initial;
+  }
 }
 @media (max-width: 768px) {
   .card--float:hover {

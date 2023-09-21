@@ -10488,13 +10488,15 @@ html {
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.32);
 }
 
+@media (max-width: 992px) {
+  .w-lg-75 {
+    width: 75% !important;
+  }
+}
 @media (max-width: 768px) {
   .card--float:hover {
     transform: none;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  }
-  .w-md-75 {
-    width: 75% !important;
   }
   .carousel-item p {
     height: 120px;

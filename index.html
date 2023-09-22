@@ -19,18 +19,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.5/purify.min.js"></script>
     <title>芳香秘境</title>
   </head>
-
   <body>
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
       <!-- container-fluid -->
       <div class="container">
-        <div>
-          <img src="./image/logo.svg" alt="logo" class="me-1" style="height: 30px" />
-          <a class="navbar-brand text-tertiary align-bottom" href="#">芳香秘境</a>
-        </div>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <div>
+          <img src="./image/logo.svg" alt="logo" class="me-1 d-none d-lg-inline" style="height: 30px" />
+          <a class="navbar-brand text-tertiary align-bottom" href="#">芳香秘境</a>
+        </div>
+        <div class="order-lg-1">
+          <a class="nav-link d-inline mx-1" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas"
+            ><i class="bi bi-cart2 cartIcon">
+              <span class="cartBadge">
+                <span class="cartCount">0</span>
+              </span>
+            </i>
+          </a>
+        </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item mx-2">
@@ -89,6 +97,62 @@
               <p class="mb-0 text-white">關閉</p>
             </button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shopping Cart Modal -->
+    <div class="modal cart-modal" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+          <div class="modal-body text-center pb-0">
+            <i class="fa-regular fa-circle-check fs-1 d-block mb-2" style="color: #b0db7d"></i>
+            商品已加入您的購物車！
+          </div>
+          <div class="modal-footer border-0 justify-content-center">
+            <button type="button" class="btn btn-success text-white" data-bs-dismiss="modal">繼續購物</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartOffcanvasLabel">購物車</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- 購物車內容 -->
+        <table class="table table-borderless align-middle">
+          <tbody>
+            <tr>
+              <td width="100"><img class="table-img" src="./image/plan01.jpg" alt="" /></td>
+              <td>初階課程</td>
+              <td>
+                <select name="" id="" class="form-select">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+              <td>$1999</td>
+              <td>
+                <a href="#" class="text-dark text-decoration-none">X</a>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="border-top-1">
+              <td colspan="5" class="text-end totalPrice">總金額 NT$ 1999</td>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-primary text-white clearCart">清空購物車</button>
+          <button class="btn btn-primary text-white">結帳</button>
         </div>
       </div>
     </div>
@@ -391,7 +455,7 @@
               <li class="list-group-item text-quaternary"><i class="bi bi-check-circle-fill text-primary me-2"></i>精油品牌的選擇和評估</li>
             </ul>
             <div class="card-body d-flex">
-              <button type="button" class="btn btn-primary text-white w-100 align-self-end">選擇方案</button>
+              <button id="plan01" type="button" class="btn btn-primary text-white w-100 align-self-end" data-bs-toggle="modal" data-bs-target="#cartModal">選擇方案</button>
             </div>
           </div>
         </li>
@@ -409,7 +473,7 @@
               <li class="list-group-item text-quaternary"><i class="bi bi-check-circle-fill text-primary me-2"></i>自製按摩油和產品</li>
             </ul>
             <div class="card-body d-flex">
-              <button type="button" class="btn btn-primary text-white w-100 align-self-end">選擇方案</button>
+              <button id="plan02" type="button" class="btn btn-primary text-white w-100 align-self-end" data-bs-toggle="modal" data-bs-target="#cartModal">選擇方案</button>
             </div>
           </div>
         </li>
@@ -427,7 +491,7 @@
               <li class="list-group-item text-quaternary"><i class="bi bi-check-circle-fill text-primary me-2"></i>十大生理系統專論</li>
             </ul>
             <div class="card-body d-flex">
-              <button type="button" class="btn btn-primary text-white w-100 align-self-end">選擇方案</button>
+              <button id="plan03" type="button" class="btn btn-primary text-white w-100 align-self-end" data-bs-toggle="modal" data-bs-target="#cartModal">選擇方案</button>
             </div>
           </div>
         </li>

@@ -63,3 +63,35 @@ document.addEventListener("DOMContentLoaded", function () {
   //     $('.card--float').stop().fadeTo('fast', 1);
   // });
 });
+
+const buttons = document.querySelectorAll(".card-body button");
+let cartCount = document.querySelector(".cartCount");
+let cartCountNum = parseInt(cartCount.textContent, 10);
+
+buttons.forEach(function (button) {
+  button.addEventListener("click", function (event) {
+    let buttonId = event.target.id;
+    cartCountNum++;
+    cartCount.textContent = cartCountNum.toString();
+
+    switch (buttonId) {
+      case "plan01":
+        break;
+      case "plan02":
+        break;
+      case "plan03":
+        break;
+      default:
+    }
+  });
+});
+const clearCart = document.querySelector(".clearCart");
+let totalPrice = document.querySelector(".totalPrice");
+
+var table = document.getElementsByTagName("tbody")[0];
+clearCart.addEventListener("click", function (event) {
+  totalPrice.textContent = "總金額 NT$ 0";
+  while (table.rows.length > 0) {
+    table.deleteRow(0);
+  }
+});

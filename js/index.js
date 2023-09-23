@@ -119,6 +119,8 @@ const cartCount = document.querySelector(".cartCount");
 const cartControls = document.querySelector(".cart-controls");
 
 function updateCartDisplay() {
+  const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+  cartCount.textContent = `${totalCount}`;
   cartTable.style.textAlign = "center";
   cartHeader.textContent = "";
   cartBody.textContent = "";
@@ -182,7 +184,7 @@ function updateCartDisplay() {
   });
   // Footer
   const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+
   const borderTopStyle = "border-top: 1px solid black;";
   const row = document.createElement("tr");
   row.style.cssText = borderTopStyle;
@@ -192,7 +194,7 @@ function updateCartDisplay() {
   cell.textContent = `總金額 NT$ ${totalPrice}`;
   row.appendChild(cell);
   cartFooter.appendChild(row);
-  cartCount.textContent = `${totalCount}`;
+
   console.log(totalCount);
 }
 

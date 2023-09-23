@@ -194,8 +194,6 @@ function updateCartDisplay() {
   cell.textContent = `總金額 NT$ ${totalPrice}`;
   row.appendChild(cell);
   cartFooter.appendChild(row);
-
-  console.log(totalCount);
 }
 
 const clearCartBtn = document.querySelector(".clearCart");
@@ -212,3 +210,10 @@ function removeFromCart(productId) {
     updateCartDisplay();
   }
 }
+
+// login
+const login = document.querySelector(".login");
+login.addEventListener("click", function () {
+  const url = "./login.html";
+  window.location.href = url;
+});

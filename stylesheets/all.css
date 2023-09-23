@@ -12471,6 +12471,10 @@ html {
   font-size: 16px;
 }
 
+.hidden-important {
+  display: none !important;
+}
+
 .table-img {
   width: 100px;
   height: 100px;

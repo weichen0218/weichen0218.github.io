@@ -116,6 +116,21 @@
       </div>
     </div>
 
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+          <div class="modal-body text-center pb-0">
+            <i class="bi bi-box-arrow-in-right fs-1 d-block mb-2"></i>
+            請先登入會員
+          </div>
+          <div class="modal-footer border-0 justify-content-center">
+            <button type="button" class="btn btn-success text-white" data-bs-dismiss="modal">登入會員</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Offcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
       <div class="offcanvas-header">
@@ -125,7 +140,8 @@
       <div class="offcanvas-body">
         <!-- 購物車內容 -->
         <table class="table table-borderless align-middle">
-          <tbody>
+          <thead class="thead"></thead>
+          <tbody class="tbody">
             <tr>
               <td width="100"><img class="table-img" src="./image/plan01.jpg" alt="" /></td>
               <td>初階課程</td>
@@ -150,9 +166,9 @@
             </tr>
           </tfoot>
         </table>
-        <div class="d-flex justify-content-between">
+        <div class="cart-controls d-flex justify-content-between">
           <button class="btn btn-primary text-white clearCart">清空購物車</button>
-          <button class="btn btn-primary text-white">結帳</button>
+          <button class="btn btn-primary text-white" data-bs-toggle="modal" data-bs-target="#loginModal">前往結帳</button>
         </div>
       </div>
     </div>
@@ -455,7 +471,7 @@
               <li class="list-group-item text-quaternary"><i class="bi bi-check-circle-fill text-primary me-2"></i>精油品牌的選擇和評估</li>
             </ul>
             <div class="card-body d-flex">
-              <button id="plan01" type="button" class="btn btn-primary text-white w-100 align-self-end" data-bs-toggle="modal" data-bs-target="#cartModal">選擇方案</button>
+              <button id="plan01" name="初階課程" type="button" class="btn btn-primary text-white w-100 align-self-end" data-bs-toggle="modal" data-bs-target="#cartModal">選擇方案</button>
             </div>
           </div>
         </li>
@@ -473,7 +489,7 @@
               <li class="list-group-item text-quaternary"><i class="bi bi-check-circle-fill text-primary me-2"></i>自製按摩油和產品</li>
             </ul>
             <div class="card-body d-flex">
-              <button id="plan02" type="button" class="btn btn-primary text-white w-100 align-self-end" data-bs-toggle="modal" data-bs-target="#cartModal">選擇方案</button>
+              <button id="plan02" name="中階課程" type="button" class="btn btn-primary text-white w-100 align-self-end" data-bs-toggle="modal" data-bs-target="#cartModal">選擇方案</button>
             </div>
           </div>
         </li>
@@ -491,7 +507,7 @@
               <li class="list-group-item text-quaternary"><i class="bi bi-check-circle-fill text-primary me-2"></i>十大生理系統專論</li>
             </ul>
             <div class="card-body d-flex">
-              <button id="plan03" type="button" class="btn btn-primary text-white w-100 align-self-end" data-bs-toggle="modal" data-bs-target="#cartModal">選擇方案</button>
+              <button id="plan03" name="高階課程" type="button" class="btn btn-primary text-white w-100 align-self-end" data-bs-toggle="modal" data-bs-target="#cartModal">選擇方案</button>
             </div>
           </div>
         </li>

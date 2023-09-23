@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="你正在尋找一種可以深度放鬆身心、提升生活品質的方式？那就讓芳療帶你探索身心平衡的奧秘！芳香秘境是一個獨特的線上教學網站，致力於為你打開精油的神秘大門，讓你親身體驗植物的奇妙力量。我們為您呈現一系列精心策劃的課程，以滿足您的求知慾望和美好願望。" />
+    <link rel="icon" href="./image/favicon.ico" />
+    <link rel="stylesheet" href="./stylesheets/all.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/f11bd19920.js" crossorigin="anonymous"></script>
+    <title>芳香秘境</title>
+  </head>
+  <style>
+    html,
+    body {
+      background-color: #f9f9f9;
+    }
+    card {
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05), 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+  <body>
+    <div class="login min-vh-100 d-flex flex-column justify-content-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-8 col-md-7 col-lg-5">
+            <h3 class="text-center text-tertiary mb-3">芳香秘境</h3>
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="nav nav-pills justify-content-evenly mb-4" id="pills-tab" role="tablist">
+                  <button class="nav-link active" id="login-tab" data-bs-toggle="pill" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">登入會員</button>
+                  <button class="nav-link" id="register-tab" data-bs-toggle="pill" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">註冊會員</button>
+                </div>
+
+                <div class="tab-content" id="myTabsContent">
+                  <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab" tabindex="0">
+                    <form class="text-muted">
+                      <div class="mb-3">
+                        <label for="username" class="form-label">Email<span class="text-danger align-middle">*</span></label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="輸入email" required />
+                      </div>
+                      <div class="mb-4">
+                        <label for="password" class="form-label">密碼<span class="text-danger align-middle">*</span></label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="輸入密碼" required />
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <button type="submit" class="btn btn-success w-100 me-2 text-white">登入</button>
+                        <a href="#" class="text-center text-muted text-decoration-none w-100">忘記密碼?</a>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab" tabindex="0">
+                    <form class="text-muted">
+                      <div class="mb-3">
+                        <label for="username" class="form-label">Email<span class="text-danger align-middle">*</span></label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="輸入email" required />
+                      </div>
+                      <div class="mb-4">
+                        <label for="password" class="form-label">密碼<span class="text-danger align-middle">*</span></label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="輸入密碼" required />
+                      </div>
+                      <div class="d-flex align-items-center mb-3">
+                        <button type="submit" class="btn btn-success w-100 me-2 text-white">註冊</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <!-- <form class="text-muted">
+                  <div class="mb-3">
+                    <label for="username" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="輸入email" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">密碼</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="輸入密碼" required />
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <button type="submit" class="btn btn-success w-100 me-2 text-white">登入</button>
+                    <a href="#" class="text-center text-muted text-decoration-none w-100">忘記密碼?</a>
+                  </div>
+                  <div class="text-center">還沒有帳號？<a href="#">註冊</a></div>
+                </form> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>

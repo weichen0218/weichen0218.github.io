@@ -10,8 +10,8 @@ const profile = {
   role: 'Frontend Engineer',
   location: 'Taipei, Taiwan',
   email: 'iamweichen0218@gmail.com',
-  github: 'https://github.com/your-github',
-  linkedin: 'https://www.linkedin.com/in/your-linkedin',
+  github: 'https://github.com/weichen0218',
+  linkedin: 'https://www.linkedin.com/in/weichen-liou-85983244a',
   available: true,
 }
 
@@ -44,7 +44,7 @@ const experiences: Experience[] = [
   {
     company: '火星人福氣金鑛',
     role: 'Frontend Engineer',
-    period: '2023 — Present',
+    period: '2024 — 2026',
     current: true,
     summary:
       'Own the frontend of customer-facing financial products, from design handoff to production deployment.',
@@ -58,7 +58,7 @@ const experiences: Experience[] = [
   {
     company: 'Freelance & Side Projects',
     role: 'Frontend Developer',
-    period: '2022 — 2023',
+    period: '2022 — 2024',
     summary:
       'Shipped small-business websites and product prototypes end-to-end, working directly with clients.',
     highlights: [
@@ -610,10 +610,7 @@ const accentClasses = computed(() => ({
             <p class="font-mono text-sm text-cyan-400">03. <span class="text-slate-500">// selected-work</span></p>
             <h2 class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-5xl">Things I've shipped.</h2>
           </div>
-          <a :href="profile.github" target="_blank" rel="noopener" class="group inline-flex items-center gap-2 font-mono text-sm text-slate-400 transition hover:text-cyan-300">
-            more on GitHub
-            <span class="transition-transform group-hover:translate-x-1">→</span>
-          </a>
+  
         </header>
 
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

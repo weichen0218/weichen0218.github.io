@@ -16,19 +16,19 @@ const profile = {
 }
 
 const typedPhrases = [
-  'Vue 3 & Nuxt',
-  'TypeScript-first UIs',
-  'pixel-perfect interfaces',
-  'AI-assisted workflows',
+  'Vue 3 與 Nuxt',
+  'TypeScript 型別安全',
+  '像素級還原設計稿',
+  'AI 輔助開發流程',
 ]
 
 interface NavLink { label: string; href: string }
 const navLinks: NavLink[] = [
-  { label: 'Stack', href: '#stack' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Work', href: '#work' },
-  { label: 'AI Lab', href: '#lab' },
-  { label: 'Contact', href: '#contact' },
+  { label: '技術', href: '#stack' },
+  { label: '經歷', href: '#experience' },
+  { label: '作品', href: '#work' },
+  { label: 'AI 實驗室', href: '#lab' },
+  { label: '聯絡', href: '#contact' },
 ]
 
 interface Experience {
@@ -43,27 +43,27 @@ interface Experience {
 const experiences: Experience[] = [
   {
     company: '火星人福氣金鑛',
-    role: 'Frontend Engineer',
+    role: '前端工程師',
     period: '2024 — 2026',
     current: true,
     summary:
-      'Own the frontend of customer-facing financial products, from design handoff to production deployment.',
+      '負責集團官網與產品網站的前端開發，從設計稿切版到正式上線一手包辦。',
     highlights: [
-      'Built the bilingual Mars eBank corporate website (mars-ebank.com) with Nuxt — products, solutions, patents and news.',
-      'Developed the Mars eSIM product site (marsesim.com) with IoT / travel eSIM flows and data-usage lookup.',
-      'Use Claude Code day-to-day for refactors, test scaffolding and code review.',
+      '以 Nuxt 開發中英雙語的 Mars eBank 集團官網（mars-ebank.com），涵蓋產品、解決方案、專利與最新消息。',
+      '開發 Mars eSIM 產品網站（marsesim.com），包含 IoT／旅遊 eSIM 流程與流量查詢功能。',
+      '日常使用 Claude Code 進行重構、測試撰寫與 Code Review。',
     ],
     tags: ['Nuxt 3', 'Vue 3', 'TypeScript', 'Tailwind'],
   },
   {
-    company: 'Freelance & Side Projects',
-    role: 'Frontend Developer',
+    company: '接案與個人專案',
+    role: '前端開發者',
     period: '2022 — 2024',
     summary:
-      'Shipped small-business websites and product prototypes end-to-end, working directly with clients.',
+      '獨立完成中小企業網站與產品原型，直接與客戶溝通需求。',
     highlights: [
-      'Delivered 6+ responsive marketing sites with CMS integrations and SEO setup.',
-      'Prototyped a realtime card game backed by Supabase auth, Postgres and row-level security.',
+      '交付 6+ 個響應式行銷網站，整合 CMS 並完成 SEO 設定。',
+      '以 Supabase Auth、Postgres 與 RLS 打造即時卡牌遊戲原型。',
     ],
     tags: ['Vue', 'Supabase', 'Vite'],
   },
@@ -83,9 +83,9 @@ interface Project {
 const projects: Project[] = [
   {
     title: 'Mars eBank',
-    kicker: 'Corporate Website',
+    kicker: '企業官網',
     description:
-      'Bilingual (繁中 / EN) group website presenting NFC, AIoT and chip-module products, eSIM solutions, patents, design awards, partners and a news feed.',
+      '中英雙語集團官網，展示 NFC、AIoT 與晶片模組產品、eSIM 解決方案、專利、設計獎項、合作夥伴與最新消息。',
     tags: ['Nuxt', 'Vue 3', 'TypeScript', 'i18n'],
     demo: 'https://www.mars-ebank.com/zh-tw',
     thumb: 'bank',
@@ -93,9 +93,9 @@ const projects: Project[] = [
   },
   {
     title: 'Mars eSIM',
-    kicker: 'eSIM Product Site',
+    kicker: 'eSIM 產品網站',
     description:
-      'Product site for IoT and travel eSIM QR codes, with data-usage lookup, FAQ, warranty info and links across the Mars product family.',
+      'IoT 與旅遊 eSIM QR Code 產品網站，提供流量查詢、常見問題與保固資訊，並串連火星人旗下各項服務。',
     tags: ['Nuxt', 'Vue 3', 'TypeScript', 'Tailwind'],
     demo: 'https://www.marsesim.com/zh-tw',
     thumb: 'esim',
@@ -103,9 +103,9 @@ const projects: Project[] = [
   },
   {
     title: 'More Than Words',
-    kicker: 'Conversation Card Game',
+    kicker: '深度話題卡牌遊戲',
     description:
-      'A draw-a-card conversation game for couples, friends and family — 6 themed packs and 270 deep-talk questions, with favorites and settings.',
+      '給情侶、朋友與家人的抽牌聊天遊戲，6 款主題卡包、270 道深度話題，支援收藏與個人設定。',
     tags: ['Vue 3', 'TypeScript', 'Supabase', 'Claude Code'],
     demo: 'https://playcloser.com/',
     thumb: 'cards',
@@ -129,7 +129,7 @@ const aiDemos: AiDemo[] = [
     name: 'Ombre Roastery',
     subtitle: '小批次精品烘焙',
     kicker: 'Coffee Roastery',
-    description: 'Moody, dark-roast brand site for a small-batch specialty coffee roaster.',
+    description: '為小批次精品咖啡烘焙品牌打造的深色調網站，營造沉穩濃郁的品牌氛圍。',
     tags: ['Vue 3', 'Vite', 'Claude Code'],
     url: 'https://coffee-ten-jade.vercel.app',
     palette: { bg: '#1A120E', fg: '#F3E9DC', accent: '#C8873A', muted: '#3A2A20' },
@@ -138,7 +138,7 @@ const aiDemos: AiDemo[] = [
     name: 'Maison Ondine',
     subtitle: '法式手工甜點',
     kicker: 'French Patisserie',
-    description: 'Elegant site for a handmade French dessert atelier in Da’an, Taipei — limited daily batches.',
+    description: '台北大安區法式手工甜點工坊的品牌網站，優雅呈現每日限量的手作甜點。',
     tags: ['Vue 3', 'Vite', 'Claude Code'],
     url: 'https://dessert-blond.vercel.app',
     palette: { bg: '#FBF3EE', fg: '#4A2E2A', accent: '#D98A94', muted: '#F0DCD3' },
@@ -148,7 +148,7 @@ const aiDemos: AiDemo[] = [
     name: 'Still Atelier',
     subtitle: '住宅室內設計',
     kicker: 'Interior Design Studio',
-    description: 'Calm, editorial portfolio for a Taipei residential interior studio — layout, materials and light.',
+    description: '台北住宅室內設計工作室的作品網站，以雜誌感排版呈現格局、材質與光線。',
     tags: ['Vue 3', 'Vite', 'Claude Code'],
     url: 'https://design-red-ten.vercel.app',
     palette: { bg: '#EEEBE5', fg: '#2B2A27', accent: '#8C7B66', muted: '#D9D3C8' },
@@ -321,7 +321,7 @@ const accentClasses = computed(() => ({
             type="button"
             class="grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-slate-300 md:hidden"
             :aria-expanded="menuOpen"
-            aria-label="Toggle menu"
+            aria-label="開關選單"
             @click="menuOpen = !menuOpen"
           >
             <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -362,30 +362,28 @@ const accentClasses = computed(() => ({
               <span v-if="profile.available" class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
               <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
-            {{ profile.available ? 'Open to new opportunities' : 'Currently heads-down' }}
+            {{ profile.available ? '正在尋找新機會' : '目前專注於工作中' }}
           </div>
 
           <p class="mb-4 font-mono text-sm text-cyan-400 sm:text-base">
             <span class="text-slate-600">~/</span>hello-world <span class="text-slate-600">$</span> whoami
           </p>
 
-          <h1 class="max-w-4xl text-4xl leading-[1.08] font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl">
-            Hi, I'm {{ profile.name.split(' ')[0] }}.
-            <span class="block text-slate-400">
-              A
-              <span class="animate-gradient bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent">Web Frontend Engineer</span>
+          <h1 class="max-w-4xl text-4xl leading-[1.25] font-extrabold tracking-wide text-white sm:text-6xl lg:text-7xl">
+            嗨，我是 {{ profile.name.split(' ')[0] }}
+            <span class="mt-2 block text-slate-400">
+              <span class="animate-gradient bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent">網頁前端工程師</span>
             </span>
           </h1>
 
           <p class="mt-6 h-8 font-mono text-lg text-slate-300 sm:text-2xl" aria-live="polite">
-            <span class="text-slate-500">specializing in </span>
+            <span class="text-slate-500">專精於 </span>
             <span class="text-cyan-300">{{ typed }}</span><span class="caret ml-0.5 inline-block h-[1.1em] w-[2px] translate-y-[3px] bg-cyan-400" />
           </p>
 
           <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
-            2+ years crafting fast, accessible and delightfully detailed web products with
-            <span class="text-gray-200">Vue</span>, <span class="text-gray-200">Nuxt</span> and
-            <span class="text-gray-200">TypeScript</span> — and shipping faster with AI-assisted development.
+            兩年以上前端開發經驗，使用 <span class="text-gray-200">Vue</span>、<span class="text-gray-200">Nuxt</span> 與
+            <span class="text-gray-200">TypeScript</span> 打造快速、易用且注重細節的網頁產品，並善用 AI 輔助開發加速交付。
           </p>
 
           <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -394,28 +392,28 @@ const accentClasses = computed(() => ({
               class="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-cyan-400 px-6 py-3.5 font-semibold text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_-5px_rgba(34,211,238,0.7)]"
             >
               <span class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-              View Work
+              查看作品
               <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </a>
             <a
               href="#contact"
               class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-6 py-3.5 font-semibold text-gray-200 backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-400/50 hover:text-emerald-300 hover:shadow-[0_0_32px_-8px_rgba(52,211,153,0.6)]"
             >
-              Contact Me
+              聯絡我
             </a>
           </div>
 
           <dl class="mt-16 grid max-w-xl grid-cols-3 gap-6 border-t border-white/5 pt-8">
             <div>
-              <dt class="font-mono text-xs text-slate-500">experience</dt>
-              <dd class="mt-1 text-2xl font-bold text-white sm:text-3xl">2+<span class="text-cyan-400"> yrs</span></dd>
+              <dt class="text-xs text-slate-500">工作經驗</dt>
+              <dd class="mt-1 text-2xl font-bold text-white sm:text-3xl">2+<span class="text-cyan-400"> 年</span></dd>
             </div>
             <div>
-              <dt class="font-mono text-xs text-slate-500">shipped</dt>
+              <dt class="text-xs text-slate-500">上線專案</dt>
               <dd class="mt-1 text-2xl font-bold text-white sm:text-3xl">15<span class="text-cyan-400">+</span></dd>
             </div>
             <div>
-              <dt class="font-mono text-xs text-slate-500">lighthouse</dt>
+              <dt class="text-xs text-slate-500">Lighthouse 分數</dt>
               <dd class="mt-1 text-2xl font-bold text-white sm:text-3xl">95<span class="text-emerald-400">+</span></dd>
             </div>
           </dl>
@@ -431,8 +429,8 @@ const accentClasses = computed(() => ({
       <section id="stack" class="mx-auto max-w-6xl scroll-mt-20 px-4 py-24 sm:px-6 lg:px-8">
         <header class="reveal mb-12">
           <p class="font-mono text-sm text-cyan-400">01. <span class="text-slate-500">// tech-stack</span></p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-5xl">Tools I build with.</h2>
-          <p class="mt-4 max-w-2xl text-slate-400">A focused, modern toolkit — chosen for developer experience, performance and long-term maintainability.</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-wide text-white sm:text-5xl">我的技術棧</h2>
+          <p class="mt-4 max-w-2xl text-slate-400">精簡而現代的工具組合，兼顧開發體驗、效能與長期可維護性。</p>
         </header>
 
         <div class="grid auto-rows-[minmax(180px,auto)] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -450,12 +448,12 @@ const accentClasses = computed(() => ({
                   <svg viewBox="0 0 256 168" class="h-6 w-6"><path fill="#00DC82" d="M143.6 167.4h95.2c3 0 6-.8 8.6-2.3a17 17 0 0 0 6.3-6.3 17 17 0 0 0 0-17.2l-64-110a17 17 0 0 0-6.2-6.3 17.4 17.4 0 0 0-17.2 0 17 17 0 0 0-6.3 6.3l-16.4 28.2-32-55.1a17 17 0 0 0-6.3-6.3 17.4 17.4 0 0 0-17.2 0 17 17 0 0 0-6.3 6.3L2.3 141.6a17 17 0 0 0 0 17.2 17 17 0 0 0 6.3 6.3c2.6 1.5 5.6 2.3 8.6 2.3h59.8c23.7 0 41.2-10.4 53.2-30.6l29.2-50.2 15.6-26.9 47 80.6h-62.6l-15.5 27.1Zm-67.8-27H34l62.6-107.7 31.2 53.9-21 36c-8 13.1-17.1 17.8-31 17.8Z" /></svg>
                 </span>
               </div>
-              <span class="rounded-full border border-emerald-400/20 bg-emerald-400/5 px-2.5 py-1 font-mono text-[11px] text-emerald-300">primary</span>
+              <span class="rounded-full border border-emerald-400/20 bg-emerald-400/5 px-2.5 py-1 font-mono text-[11px] text-emerald-300">主力</span>
             </div>
 
             <h3 class="mt-6 text-2xl font-bold text-white sm:text-3xl">Vue 3 &amp; Nuxt</h3>
             <p class="mt-3 max-w-md text-slate-400">
-              Composition API, composables, SSR/SSG with Nuxt 3, Pinia state, and component architectures that scale with the team.
+              Composition API、Composables、Nuxt 3 SSR／SSG、Pinia 狀態管理，以及能隨團隊擴展的元件架構。
             </p>
 
             <!-- code snippet -->
@@ -480,8 +478,7 @@ const accentClasses = computed(() => ({
           >
             <span class="grid h-11 w-11 place-items-center rounded-xl bg-[#3178C6] font-mono text-sm font-bold text-white">TS</span>
             <h3 class="mt-5 text-lg font-semibold text-white">TypeScript</h3>
-            <p class="mt-1.5 text-sm text-slate-400">Strict mode, generics &amp; typed APIs. Bugs caught before users do.</p>
-            <div class="absolute right-5 bottom-5 font-mono text-[11px] text-slate-600 transition group-hover:text-cyan-400">strict: true</div>
+            <p class="mt-1.5 text-sm text-slate-400">嚴格模式、泛型與型別化 API，在使用者遇到之前就先抓出 Bug。</p>
           </article>
 
           <!-- Tailwind -->
@@ -493,7 +490,7 @@ const accentClasses = computed(() => ({
               <svg viewBox="0 0 54 33" class="h-5 w-7"><path fill="#38bdf8" fill-rule="evenodd" d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0ZM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2Z" clip-rule="evenodd" /></svg>
             </span>
             <h3 class="mt-5 text-lg font-semibold text-white">Tailwind CSS</h3>
-            <p class="mt-1.5 text-sm text-slate-400">Design tokens, responsive systems and motion — straight in the markup.</p>
+            <p class="mt-1.5 text-sm text-slate-400">以設計 Token 建立響應式系統與動態效果，樣式與結構一目了然。</p>
           </article>
 
           <!-- Claude Code / AI -->
@@ -508,11 +505,11 @@ const accentClasses = computed(() => ({
                   <span class="grid h-11 w-11 place-items-center rounded-xl border border-[#D97757]/30 bg-[#D97757]/10 text-[#E8956F]">
                     <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M12 2l1.9 6.6L20.5 7l-4.8 4.9 4.8 4.9-6.6-1.6L12 22l-1.9-6.8-6.6 1.6 4.8-4.9L3.5 7l6.6 1.6z" /></svg>
                   </span>
-                  <span class="rounded-full border border-white/10 px-2.5 py-1 font-mono text-[11px] text-slate-400">AI-assisted dev</span>
+                  <span class="rounded-full border border-white/10 px-2.5 py-1 font-mono text-[11px] text-slate-400">AI 輔助開發</span>
                 </div>
                 <h3 class="mt-5 text-lg font-semibold text-white">Claude Code</h3>
                 <p class="mt-1.5 text-sm text-slate-400">
-                  Daily driver for refactors, test generation, codebase exploration and review — I treat AI as a pair programmer, with engineering judgment staying in the loop.
+                  重構、測試生成、程式碼探索與 Code Review 的日常主力工具。把 AI 當作結對程式夥伴，但工程判斷始終由我把關。
                 </p>
               </div>
               <div class="w-full rounded-xl border border-white/5 bg-slate-950/80 p-4 font-mono text-[12px] leading-6 sm:w-60">
@@ -533,7 +530,7 @@ const accentClasses = computed(() => ({
               <svg viewBox="0 0 109 113" class="h-5 w-5"><path fill="#3ECF8E" d="M63.7 110.3c-2.9 3.6-8.7 1.6-8.8-3l-1-67.6h45.5c8.2 0 12.8 9.5 7.7 16L63.7 110.3Z" /><path fill="#3ECF8E" fill-opacity=".5" d="M45.3 2.1c2.9-3.6 8.7-1.6 8.8 3l.4 67.6H9.6c-8.3 0-12.8-9.5-7.7-16L45.3 2.1Z" /></svg>
             </span>
             <h3 class="mt-5 text-lg font-semibold text-white">Supabase</h3>
-            <p class="mt-1.5 text-sm text-slate-400">Auth, Postgres, RLS &amp; realtime — full-stack features without the backend overhead.</p>
+            <p class="mt-1.5 text-sm text-slate-400">Auth、Postgres、RLS 與 Realtime，不必自架後端也能完成全端功能。</p>
           </article>
 
           <!-- Pills tile -->
@@ -541,7 +538,7 @@ const accentClasses = computed(() => ({
             class="reveal spotlight relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 p-6 transition duration-500 hover:border-cyan-400/30"
             @pointermove="trackPointer"
           >
-            <h3 class="font-mono text-xs tracking-wider text-slate-500 uppercase">Also fluent in</h3>
+            <h3 class="font-mono text-xs tracking-wider text-slate-500 uppercase">其他熟悉的工具</h3>
             <ul class="mt-4 flex flex-wrap gap-2">
               <li
                 v-for="t in [...coreStack.slice(4), ...tooling]"
@@ -560,8 +557,8 @@ const accentClasses = computed(() => ({
         <div class="grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-16">
           <header class="reveal lg:sticky lg:top-28 lg:self-start">
             <p class="font-mono text-sm text-cyan-400">02. <span class="text-slate-500">// experience</span></p>
-            <h2 class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-5xl">Where I've worked.</h2>
-            <p class="mt-4 text-slate-400">Two-plus years shipping production frontends in fintech and beyond.</p>
+            <h2 class="mt-3 text-3xl font-bold tracking-wide text-white sm:text-5xl">工作經歷</h2>
+            <p class="mt-4 text-slate-400">兩年以上的正式產品前端開發經驗。</p>
           </header>
 
           <ol class="relative space-y-6 border-l border-white/10 pl-6 sm:pl-10">
@@ -608,7 +605,7 @@ const accentClasses = computed(() => ({
         <header class="reveal mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p class="font-mono text-sm text-cyan-400">03. <span class="text-slate-500">// selected-work</span></p>
-            <h2 class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-5xl">Things I've shipped.</h2>
+            <h2 class="mt-3 text-3xl font-bold tracking-wide text-white sm:text-5xl">精選作品</h2>
           </div>
   
         </header>
@@ -651,7 +648,7 @@ const accentClasses = computed(() => ({
                   <div class="absolute inset-0 rotate-6 rounded-xl border border-white/10 bg-slate-700 transition-transform duration-500 group-hover:translate-x-6 group-hover:rotate-[14deg]" />
                   <div class="absolute inset-0 flex flex-col justify-between rounded-xl border border-emerald-400/40 bg-gradient-to-br from-emerald-500 to-teal-600 p-3 shadow-[0_10px_40px_-10px_rgba(52,211,153,0.6)] transition-transform duration-500 group-hover:-translate-y-2">
                     <span class="font-mono text-[9px] text-emerald-950/70">DEEP · 07</span>
-                    <span class="text-[11px] leading-tight font-semibold text-white">What made you who you are today?</span>
+                    <span class="text-[11px] leading-tight font-semibold text-white">是什麼讓你成為今天的自己？</span>
                   </div>
                 </div>
               </div>
@@ -697,7 +694,7 @@ const accentClasses = computed(() => ({
                   @click.stop
                   class="inline-flex items-center gap-1.5 rounded-lg bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:bg-cyan-400 hover:text-slate-950 hover:shadow-[0_0_24px_-4px_rgba(34,211,238,0.7)]"
                 >
-                  Live Demo
+                  線上 Demo
                   <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9" /></svg>
                 </a>
                 <a
@@ -708,7 +705,7 @@ const accentClasses = computed(() => ({
                   @click.stop
                   class="inline-flex items-center gap-1.5 px-2 py-2 text-sm text-slate-400 transition hover:text-white"
                 >
-                  Source
+                  原始碼
                 </a>
               </div>
             </div>
@@ -721,14 +718,14 @@ const accentClasses = computed(() => ({
         <header class="reveal mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p class="font-mono text-sm text-cyan-400">04. <span class="text-slate-500">// ai-lab</span></p>
-            <h2 class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-5xl">Built with AI.</h2>
+            <h2 class="mt-3 text-3xl font-bold tracking-wide text-white sm:text-5xl">AI 實驗作品</h2>
             <p class="mt-4 max-w-2xl text-slate-400">
-              Concept sites designed and shipped with AI-assisted development — exploring how far a clear brief, good prompts and a frontend eye can go.
+              運用 AI 輔助開發設計並上線的概念網站，探索清楚的需求、好的 Prompt 與前端美感能走多遠。
             </p>
           </div>
           <span class="inline-flex w-fit items-center gap-2 rounded-full border border-[#D97757]/30 bg-[#D97757]/10 px-3 py-1.5 font-mono text-xs text-[#E8956F]">
             <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="currentColor"><path d="M12 2l1.9 6.6L20.5 7l-4.8 4.9 4.8 4.9-6.6-1.6L12 22l-1.9-6.8-6.6 1.6 4.8-4.9L3.5 7l6.6 1.6z" /></svg>
-            AI-assisted
+            AI 輔助開發
           </span>
         </header>
 
@@ -789,23 +786,23 @@ const accentClasses = computed(() => ({
         <div class="reveal relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 px-6 py-16 text-center sm:px-12 sm:py-20">
           <div aria-hidden="true" class="pointer-events-none absolute -top-24 left-1/2 h-64 w-[36rem] max-w-full -translate-x-1/2 rounded-full bg-cyan-500/20 blur-[100px]" />
           <p class="relative font-mono text-sm text-cyan-400">05. <span class="text-slate-500">// what's-next</span></p>
-          <h2 class="relative mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl">Let's build something great.</h2>
+          <h2 class="relative mt-4 text-3xl font-bold tracking-wide text-white sm:text-5xl">一起打造好作品吧</h2>
           <p class="relative mx-auto mt-4 max-w-xl text-slate-400">
-            Whether it's a role, a collaboration or just a chat about Vue — my inbox is always open.
+            無論是工作機會、合作邀約，或只是想聊聊 Vue，都歡迎來信。
           </p>
           <div class="relative mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
               :href="`mailto:${profile.email}`"
               class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-400 px-6 py-3.5 font-semibold text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_-5px_rgba(34,211,238,0.7)] sm:w-auto"
             >
-              Say hello
+              寄信給我
             </a>
             <button
               type="button"
               class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/10 px-6 py-3.5 font-mono text-sm text-slate-300 transition hover:border-emerald-400/50 hover:text-emerald-300 sm:w-auto"
               @click="copyEmail"
             >
-              <span>{{ copied ? '✓ copied!' : profile.email }}</span>
+              <span>{{ copied ? '✓ 已複製！' : profile.email }}</span>
             </button>
           </div>
         </div>
@@ -816,7 +813,7 @@ const accentClasses = computed(() => ({
     <footer class="border-t border-white/5">
       <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 py-10 sm:flex-row sm:px-6 lg:px-8">
         <p class="font-mono text-xs text-slate-500">
-          © {{ year }} {{ profile.name }} · Built with <span class="text-emerald-400">Vue</span> + <span class="text-cyan-400">Tailwind</span>
+          © {{ year }} {{ profile.name }} · 使用 <span class="text-emerald-400">Vue</span> + <span class="text-cyan-400">Tailwind</span> 打造
         </p>
         <ul class="flex items-center gap-2">
           <li>
